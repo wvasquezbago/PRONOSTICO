@@ -1,0 +1,4 @@
+﻿<hostitem:hostItem hostitem:baseType="Microsoft.Office.Tools.Excel.WorksheetBase" hostitem:namespace="MOD1" hostitem:className="Hoja1" hostitem:identifier="Hoja1" hostitem:primaryCookie="Hoja1" hostitem:factoryType="Microsoft.Office.Tools.Excel.Factory" hostitem:startupIndex="1" xmlns:hostitem="http://schemas.microsoft.com/2004/VisualStudio/Tools/Applications/HostItem.xsd">
+  <hostitem:hostControl hostitem:name="MOD1_PRO_MEN" hostitem:identifier="MOD1_PRO_MEN" hostitem:type="Microsoft.Office.Tools.Excel.NamedRange" hostitem:primaryCookie="MOD1_PRO_MEN" hostitem:extenderCookie="" hostitem:modifier="Internal" />
+  <hostitem:hostControl hostitem:name="RANGO_MOD1_PRO_MEN" hostitem:identifier="RANGO_MOD1_PRO_MEN" hostitem:type="Microsoft.Office.Tools.Excel.NamedRange" hostitem:primaryCookie="RANGO_MOD1_PRO_MEN" hostitem:extenderCookie="" hostitem:modifier="Internal" />
+</hostitem:hostItem>

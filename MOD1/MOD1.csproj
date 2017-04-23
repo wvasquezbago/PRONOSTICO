@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>MOD1</RootNamespace>
+    <AssemblyName>MOD1</AssemblyName>
+    <VSTO_HostDocumentName>MODULO1.xlsm</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Excel</OfficeApplication>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <ProjectGuid>{DAA88DB2-4CB0-4F2A-A77B-7DAE7A22CD71}</ProjectGuid>
+    <SolutionID>7c8b3bdb-9c3d-427f-bd0d-1645e93892ef</SolutionID>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BOGeneral.cs" />
+    <Compile Include="Carga\Data.cs" />
+    <Compile Include="Carga\Forecast.cs" />
+    <Compile Include="Carga\Load.cs" />
+    <Compile Include="Carga\Manager.cs" />
+    <Compile Include="Carga\Reader.cs" />
+    <Compile Include="Conex.cs" />
+    <Compile Include="DAOGeneral.cs" />
+    <Compile Include="Entidades\PesosAnios.cs" />
+    <Compile Include="Entidades\StoredProcedure.cs" />
+    <Compile Include="Entidades\EPronDiario.cs" />
+    <Compile Include="Entidades\EPronMen.cs" />
+    <Compile Include="Entidades\EPronSem.cs" />
+    <Compile Include="Hoja1.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja1.Designer.cs">
+      <DependentUpon>Hoja1.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja10.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja10.Designer.cs">
+      <DependentUpon>Hoja10.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja2.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja2.Designer.cs">
+      <DependentUpon>Hoja2.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja3.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja3.Designer.cs">
+      <DependentUpon>Hoja3.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja4.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja4.Designer.cs">
+      <DependentUpon>Hoja4.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja5.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja5.Designer.cs">
+      <DependentUpon>Hoja5.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja6.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja6.Designer.cs">
+      <DependentUpon>Hoja6.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja7.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja7.Designer.cs">
+      <DependentUpon>Hoja7.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja8.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja8.Designer.cs">
+      <DependentUpon>Hoja8.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja9.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="Hoja9.Designer.cs">
+      <DependentUpon>Hoja9.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="PRON.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PRON.Designer.cs">
+      <DependentUpon>PRON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pronostico\Calculo.cs" />
+    <Compile Include="Pronostico\Clases\Factor.cs" />
+    <Compile Include="Pronostico\Clases\Historico.cs" />
+    <Compile Include="Pronostico\Clases\HistoricoDateTime.cs" />
+    <Compile Include="Pronostico\Clases\KeyVal.cs" />
+    <Compile Include="Pronostico\Clases\Pronostico.cs" />
+    <Compile Include="Pronostico\Datos.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThisWorkbook.cs">
+      <DependentUpon>MODULO1.xlsm</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.Designer.cs">
+      <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronDiaCuant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronDiaCuant.Designer.cs">
+      <DependentUpon>frmPronDiaCuant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronDiaDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronDiaDisc.Designer.cs">
+      <DependentUpon>frmPronDiaDisc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronMensual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronMensual.Designer.cs">
+      <DependentUpon>frmPronMensual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronPesosAnios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronPesosAnios.Designer.cs">
+      <DependentUpon>frmPronPesosAnios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronSemCuant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronSemCuant.Designer.cs">
+      <DependentUpon>frmPronSemCuant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\frmPronSemDisc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\frmPronSemDisc.Designer.cs">
+      <DependentUpon>frmPronSemDisc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PRON.resx">
+      <DependentUpon>PRON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Vistas\frmPronDiaCuant.resx">
+      <DependentUpon>frmPronDiaCuant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPronDiaDisc.resx">
+      <DependentUpon>frmPronDiaDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPronMensual.resx">
+      <DependentUpon>frmPronMensual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPronSemCuant.resx">
+      <DependentUpon>frmPronSemCuant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\frmPronSemDisc.resx">
+      <DependentUpon>frmPronSemDisc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="MOD1_TemporaryKey.pfx" />
+    <None Include="MODULO1.xlsm" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThisWorkbook.Designer.xml">
+      <DependentUpon>ThisWorkbook.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja1.Designer.xml">
+      <DependentUpon>Hoja1.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja5.Designer.xml">
+      <DependentUpon>Hoja5.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja4.Designer.xml">
+      <DependentUpon>Hoja4.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja2.Designer.xml">
+      <DependentUpon>Hoja2.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja8.Designer.xml">
+      <DependentUpon>Hoja8.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja9.Designer.xml">
+      <DependentUpon>Hoja9.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja3.Designer.xml">
+      <DependentUpon>Hoja3.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja6.Designer.xml">
+      <DependentUpon>Hoja6.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja7.Designer.xml">
+      <DependentUpon>Hoja7.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hoja10.Designer.xml">
+      <DependentUpon>Hoja10.cs</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecast1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecast2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forecast3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MOD1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>92CE292BBFC81BB70720289A7DB560BD262762C6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="MODULO1.xlsm" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="CS" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files (x86)\Microsoft Office\Office15\Excel.exe" DebugInfoCommandLine="/x &quot;[$OUTPUT]MODULO1.xlsm&quot;" />
+        <Host Name="Excel Document" Path=".\MODULO1.xlsm" GeneratedCodeNamespace="MOD1">
+          <HostItem Name="Hoja1" Code="Hoja1.cs" CanonicalName="Hoja1" CanActivate="false" DisplayName="PRON1" Blueprint="Hoja1.Designer.xml" GeneratedCode="Hoja1.Designer.cs" />
+          <HostItem Name="Hoja10" Code="Hoja10.cs" CanonicalName="Hoja10" CanActivate="false" DisplayName="Hoja1" Blueprint="Hoja10.Designer.xml" GeneratedCode="Hoja10.Designer.cs" />
+          <HostItem Name="Hoja2" Code="Hoja2.cs" CanonicalName="Hoja2" CanActivate="false" DisplayName="D_PRON_SEM" Blueprint="Hoja2.Designer.xml" GeneratedCode="Hoja2.Designer.cs" />
+          <HostItem Name="Hoja3" Code="Hoja3.cs" CanonicalName="Hoja3" DisplayName="PRON_SEM_DISC" Blueprint="Hoja3.Designer.xml" GeneratedCode="Hoja3.Designer.cs" />
+          <HostItem Name="Hoja4" Code="Hoja4.cs" CanonicalName="Hoja4" DisplayName="PRONOSTICO" Blueprint="Hoja4.Designer.xml" GeneratedCode="Hoja4.Designer.cs" />
+          <HostItem Name="Hoja5" Code="Hoja5.cs" CanonicalName="Hoja5" DisplayName="INICIO" Blueprint="Hoja5.Designer.xml" GeneratedCode="Hoja5.Designer.cs" />
+          <HostItem Name="Hoja6" Code="Hoja6.cs" CanonicalName="Hoja6" CanActivate="false" DisplayName="D_PRON_DIA" Blueprint="Hoja6.Designer.xml" GeneratedCode="Hoja6.Designer.cs" />
+          <HostItem Name="Hoja7" Code="Hoja7.cs" CanonicalName="Hoja7" DisplayName="PRON_DIA_DISC" Blueprint="Hoja7.Designer.xml" GeneratedCode="Hoja7.Designer.cs" />
+          <HostItem Name="Hoja8" Code="Hoja8.cs" CanonicalName="Hoja8" DisplayName="PRON_SEM_CAL" Blueprint="Hoja8.Designer.xml" GeneratedCode="Hoja8.Designer.cs" />
+          <HostItem Name="Hoja9" Code="Hoja9.cs" CanonicalName="Hoja9" DisplayName="PRON_DIA_CAL" Blueprint="Hoja9.Designer.xml" GeneratedCode="Hoja9.Designer.cs" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.cs" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

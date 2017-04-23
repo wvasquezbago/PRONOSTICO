@@ -32,6 +32,7 @@ namespace MOD1
             EPronDiario pron = new EPronDiario();
             foreach (System.Data.DataRow row in dt.Rows)
             {
+                //willy
                 pron.ID_ARTICULO = Convert.ToString(row["ID_ARTICULO"]);
                 pron.FECHA = Convert.ToDateTime(row["FECHA"]);
                 pron.VENTA = Convert.ToDouble(row["VENTA"]);

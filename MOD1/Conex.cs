@@ -12,7 +12,7 @@ namespace MOD1
         public static String cadena =
 
             //@"Data Source=MACBOOKPRO\SQLEXPRESS; Initial Catalog=TestLaiveSCM; Integrated Security=Yes ;Max Pool Size=10000";
-            @"Data Source=192.168.1.150;Initial Catalog=TestLaiveSCM;User ID=sa;Password=Tecsup00";
+            @"Data Source=192.168.1.51;Initial Catalog=TestLaiveSCM;User ID=sa;Password=Tecsup00";
             //@"Data Source=zeus;Initial Catalog=TestLaiveSCM;User ID=AppLaiveSCM;Password=laive2017";
         //@"Data Source=zeus;Initial Catalog=TestLaiveSCM;User ID=AppLaive;Password=password";
         //@"user id=Gabriel;" +
